@@ -1,4 +1,3 @@
-import { Context } from "https://deno.land/x/oak/mod.ts";
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
 
 export interface Product {
@@ -140,3 +139,11 @@ export const products: Product[] = [
         "image": "Buch.jpg",
     }
 ];
+
+export function getAllProducts(): Product[] {
+    return products;
+}
+
+export function getProductById(productId: string): Product | undefined {
+    return products.find(product => product.id === productId);
+}
