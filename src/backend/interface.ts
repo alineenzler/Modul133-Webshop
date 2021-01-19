@@ -1,7 +1,7 @@
 import { Context } from "https://deno.land/x/oak/mod.ts";
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
 
-interface Product {
+export interface Product {
     id: string,
     productName: string,
     description: string,
@@ -10,7 +10,7 @@ interface Product {
     image: string
 };
 
-var getProducts: Product[] = [
+export const products: Product[] = [
     {    
         "id": v4.generate(),
         "productName": "Taschenlampe",
@@ -140,5 +140,3 @@ var getProducts: Product[] = [
         "image": "Buch.jpg",
     }
 ];
-
-export default getProducts;

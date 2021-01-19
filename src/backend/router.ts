@@ -1,14 +1,18 @@
 import { Router } from "https://deno.land/x/oak/mod.ts";
-import getProducts from '../backend/interface.ts';
+import {products, Product} from "../backend/interface.ts";
 
-const router = new Router();
+export const router = new Router();
 
 router
-    .get("/AllProducts", ({ response }: { response: any}) => {
+    .get("/product", ({ response }: { response: any}) => {
         response.status = 200;
         response.body = {
             success: true,
-            data: getProducts
-        }});
-
-export default router;
+            data: products
+        }})
+        .get("/product/:id", (context) => {
+            if (context.params && context.params.id) {
+                const productId = context.params.id;
+              context.response.body = products.find((product: Product) => product.id === productId);
+            }
+        });

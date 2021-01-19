@@ -1,5 +1,5 @@
 import { Application, Router, send } from "https://deno.land/x/oak/mod.ts";
-import router from '../Modul133-Webshop/src/backend/router.ts';
+import {router} from '../Modul133-Webshop/src/backend/router.ts';
 
 const app = new Application();
 const port: number = 8000;
