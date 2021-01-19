@@ -5,3 +5,5 @@ Anleitung zum starten:
   2. cd /Dateipfad/ -> eingeben
   3. deno run --allow-net --allow-read app.ts -> eingeben
   4. Im Webbrowser "Localhost:8000" eingeben
+  
+Beim ersten Teil des Warenkorbs, hat mir Dominic geholfen.
