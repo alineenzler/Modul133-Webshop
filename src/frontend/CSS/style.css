@@ -134,6 +134,8 @@ header {
     font-size: 3rem;
     font-weight: 600;
     padding: 10rem 0rem 1rem 0rem;
+    margin-top: 5rem;
+}
   }
 
   /*Product Design*/
@@ -145,6 +147,10 @@ header {
 .product-image {
   width: 100%;
   
+}
+
+.detailproduct-image {
+  width: 45rem;
 }
 .row {
   display: flex;
@@ -158,6 +164,18 @@ header {
 old {
   text-decoration: line-through !important;
   color: red !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.detailtitle {
+  font-size: 5rem;
+}
+
+.detailtext {
+  padding-top: 1rem;
 }
 
 /*Warenkorb Design*/
